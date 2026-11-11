@@ -1,4 +1,4 @@
-package com.dt2.petmania.entities.enums;
+package com.dt2.petmania.enums;
 
 
 public enum Sexo {

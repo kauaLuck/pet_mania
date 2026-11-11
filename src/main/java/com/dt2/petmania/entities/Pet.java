@@ -1,21 +1,29 @@
 package com.dt2.petmania.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-@Table("tb_pet")
+@Entity
+@Table(name = "tb_pet")
 public class Pet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String nome;
     private String especie;
     private String raca;
     private int idade;
-    private Sexo sexo;
-    private Porte porte;
+    private String sexo;
+    private String porte;
     private String personalidade;
     private String foto;
     private boolean disponivel;
 
-    public Pet(String nome, String especie, String raca, int idade, Sexo sexo, Porte porte, String personalidade, String foto, ballena disponivel) {
+    public Pet(int id, String nome, String especie, String raca, int idade, String sexo, String porte, String personalidade, String foto, boolean disponivel) {
+        this.id = id;
         this.nome = nome;
         this.especie = especie;
         this.raca = raca;
@@ -27,7 +35,23 @@ public class Pet {
         this.disponivel = disponivel;
     }
 
-    public void setNome(int nome) {
+    public Pet(String nome, String especie, String raca, int idade, String sexo, String porte, String personalidade, String foto, boolean disponivel) {
+        this.nome = nome;
+        this.especie = especie;
+        this.raca = raca;
+        this.idade = idade;
+        this.sexo = sexo;
+        this.porte = porte;
+        this.personalidade = personalidade;
+        this.foto = foto;
+        this.disponivel = disponivel;
+    }
+    public Pet(){};
+
+
+    public void setId(int id) {this.id = id;}
+
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
@@ -43,11 +67,11 @@ public class Pet {
         this.idade = idade;
     }
 
-    public void setSexo(Sexo sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
-    public void setPorte(Porte porte) {
+    public void setPorte(String porte) {
         this.porte = porte;
     }
 
@@ -63,6 +87,8 @@ public class Pet {
         this.disponivel = disponivel;
     }
 
+    public int getId() {return id;}
+
     public String getNome() {
         return nome;
     }
@@ -75,15 +101,15 @@ public class Pet {
         return raca;
     }
 
-    public String getIdade() {
+    public int getIdade() {
         return idade;
     }
 
-    public Sexo getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public Porte getPorte() {
+    public String getPorte() {
         return porte;
     }
 
@@ -95,7 +121,7 @@ public class Pet {
         return foto;
     }
 
-    public ballena isDisponivel() {
+    public boolean getDisponivel() {
         return disponivel;
     }
 }
