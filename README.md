@@ -68,10 +68,4 @@ Visualização da página principal exibindo os cards dos animais cadastrados e 
 <img width="1767" height="934" alt="Captura de tela 2026-11-11 170903" src="https://github.com/user-attachments/assets/287dce73-81ca-4699-9a81-6462af69535e" />
 
 
----
 
-## 🔧 Como Executar o Projeto
-
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/kauaLuck/pet_mania.git](https://github.com/kauaLuck/pet_mania.git)
